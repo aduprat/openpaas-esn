@@ -319,9 +319,11 @@ angular.module('linagora.esn.unifiedinbox')
     };
   })
 
-  .controller('attachmentController', function($window) {
+  .controller('attachmentController', function($window, inboxConfig) {
     this.download = function(attachment) {
-      $window.open(attachment.url);
+      inboxConfig('downloadUrl').then(function(url) {
+        $window.open(url + '/' + attachment.blobId);
+      });
     };
   })
 

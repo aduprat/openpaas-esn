@@ -211,6 +211,7 @@ Tell to the ESN instances where is the JMAP API that will be used by the Unified
     {
       "_id": "jmap",
       "api": "https://jmap-server/jmap/",
+      "downloadUrl": "https://jmap-server/download",
       "uploadUrl": "https://jmap-server/jmap/upload",
       "isJmapSendingEnabled": false,
       "maxSizeUpload": 20971520
@@ -219,5 +220,6 @@ Tell to the ESN instances where is the JMAP API that will be used by the Unified
 Set `isJmapSendingEnabled` to `true` to use JMAP to send email, if not, it will
 Set `isSaveDraftBeforeSendingEnabled` to `false` to not save a draft before sending an email
 use the default mailer of ESN.
+The `downloadUrl` property defines the URL used to download attachments.
 The `uploadUrl` property defines the URL used to upload attachments.
 The `maxSizeUpload` property defines the maximum size for a single file upload.

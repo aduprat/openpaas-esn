@@ -46,6 +46,12 @@ The following features are supported for the `linagora.esn.unifiedinbox` module:
 ```
 ```
 {
+    "name" : "downloadUrl",
+    "value" : "http://host:port/download/account_id"
+}
+```
+```
+{
     "name" : "uploadUrl",
     "value" : "http://host:port/upload/account_id"
 }

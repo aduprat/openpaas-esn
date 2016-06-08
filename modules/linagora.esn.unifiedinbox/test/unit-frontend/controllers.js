@@ -38,6 +38,7 @@ describe('The linagora.esn.unifiedinbox module controllers', function() {
     module('linagora.esn.unifiedinbox', function($provide) {
       jmapClient = {};
       config = {};
+      config['linagora.esn.unifiedinbox.downloadUrl'] = 'http://jmap';
       config['linagora.esn.unifiedinbox.uploadUrl'] = 'http://jmap';
       config['linagora.esn.unifiedinbox.maxSizeUpload'] = DEFAULT_MAX_SIZE_UPLOAD;
       fileUploadMock = {

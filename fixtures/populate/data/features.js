@@ -13,6 +13,7 @@ module.exports = function(domains, host) {
   var isSaveDraftBeforeSendingEnabled = process.env.SAVE_DRAFT_BEFORE_SENDING_ENABLED || false;
   var maxSizeUpload = process.env.JMAP_MAX_SIZE_UPLOAD || 20971520;
   var api = 'http://' + jmapHost + ':' + port + '/' + path;
+  var downloadUrl = 'http://' + jmapHost + ':' + port + '/download';
   var uploadUrl = process.env.JMAP_UPLOAD_URL || api + '/upload';
   var downloadUrl = process.env.JMAP_DOWNLOAD_URL || api + '/download';
   var view = process.env.JMAP_VIEW || 'messages';
@@ -36,6 +37,10 @@ module.exports = function(domains, host) {
             {
               name: 'api',
               value: api
+            },
+            {
+              name: 'downloadUrl',
+              value: downloadUrl
             },
             {
               name: 'uploadUrl',
